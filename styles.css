@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#search-form {
+    margin-left: auto; /* Đẩy form tìm kiếm sang phải */
+    margin-right: 20px; /* Tạo khoảng cách giữa form tìm kiếm và user-actions */
+    display: flex;
+    align-items: center;
+}
+
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+#search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+#search-button i {
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    #search-button span {
+        display: none;
+    }
+    
+    #search-button {
+        padding: 10px;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: #f0c303;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-actions a {
+    color:black ;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    max-width: 1200px; /* Thêm chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa main content */
+    flex: 1 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+/* Movie grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center; /* Căn giữa các items trong grid */
+}
+
+.movie-card {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover img {
+    opacity: 0.8;
+}
+
+/* Cập nhật .movie-info */
+.movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+.movie-card:hover .movie-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Thêm các style mới cho nội dung trong .movie-info */
+.movie-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.movie-info h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.movie-info .description {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.movie-info p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.movie-info .credit {
+    font-size: 0.7em;
+    font-style: italic;
+    text-align: right;
+}
+
+.movie-card .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+}
+
+.movie-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-title {
+    opacity: 0;
+}
+
+@media (max-width: 1200px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-description {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.footer-categories {
+    display: flex;
+    flex: 2;
+}
+
+.category-column {
+    flex: 1;
+}
+.category-column h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.category-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-column ul li {
+    margin-bottom: 8px;
+}
+
+.category-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.category-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-info {
+    flex: 1;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    background-color: yellow;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.highlight {
+    color: #ffd700;
+}
+
+.movie-showcase {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.showcase-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.showcase-slide.active {
+    opacity: 1;
+}
+
+.showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.showcase-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.showcase-description {
+    font-size: 16px;
+}
+
+.movie-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Dropdown styles */
+.dropdown {
+    display: inline-block;
+    position: static; /* Thay đổi từ relative sang static */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #f1f1f1;
+}
+
+/* Specific styles for the movie dropdown */
+.movie-dropdown {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px; /* Tăng khoảng cách giữa các cột */
+    padding: 12px; /* Tăng padding tổng thể */
+    background-color: black;
+    min-width: 600px; /* Tăng chiều rộng tối thiểu một chút */
+    position: absolute;
+    top: 150%;
+    left: 0;
+}
+
+.dropdown:hover .movie-dropdown {
+    display: grid;
+}
+
+.movie-dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px; /* Giảm padding */
+    font-size: 0.9em; /* Giảm kích thước chữ */
+    white-space: nowrap; /* Ngăn xuống dòng */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    line-height: 1.4; /* Thêm line-height để tăng khoảng cách giữa các dòng */
+    text-overflow: ellipsis; /* Hiển thị dấu ... nếu nội dung bị ct */
+}
+
+.movie-dropdown a:hover {
+    color: #e6e600;
+}
+
+/* Nested dropdown */
+.nested-dropdown {
+    position: relative;
+}
+
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 70%;
+    top: 0;
+    /* background-color: black; */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001;
+    padding: 8px 0;
+}
+
+.nested-dropdown:hover > .nested-dropdown-content {
+    display: flex;
+
+}
+
+.nested-dropdown-content a {
+    color: white;
+    padding: 4px 12px; /* Tăng padding */
+    text-decoration: none;
+    display: block;
+    font-size: 0.85em;
+    line-height: 1.4; /* Thêm line-height để tăng khoảng cách giữa các dòng */
+}
+
+.nested-dropdown-content a:hover {
+    color: #e6e600;
+}
+
+/* Main navigation styles */
+nav {
+    position: relative; /* Đảm bảo nav là điểm tham chiếu cho vị trí tuyệt đối */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styles for the movie series dropdown */
+.movie-series-dropdown {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 10px;
+}
+
+.showcase-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.control-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-dot.active {
+  background-color: #fff;
+}
+
+.control-dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-all-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0c14b;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-link:hover {
+    background-color: #ddb347;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    max-height: 50px; /* Điều chỉnh kích thước này theo nhu cầu của bạn */
+    width: auto;
+    margin-right: 20px; /* Tạo khoảng cách giữa logo và phần còn lại của header */
+}
+.movie-showcase {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 450px; /* Adjust this value as needed */
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+.pagination ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.pagination ul li a {
+    color: #f0c303;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pagination ul li a:hover {
+    background-color: #f0c303;
+    color: #000;
+}
