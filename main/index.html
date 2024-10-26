@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tên Trang Web Của Bạn - Xem phim online miễn phí chất lượng cao</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imag/Logowed.png" alt="HDViet Logo" class="site-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="btl/leHD.html">Phim lẻ</a>
+                    <div class="dropdown-content movie-dropdown">
+                        <div>
+                        <a href="PhimHDDeCu.html">Phim lẻ HDViệt đề cử</a>
+                        <a href="btl/leMoi.html">Phim lẻ mới cập nhật</a>
+                        <a href="#">Phim chiếu rạp</a>
+                        <a href="#">Phim sắp chiếu</a>
+                        </div>
+                        <div>
+                        <a href="#">Âu Mỹ</a>
+                        <a href="#">Châu Á</a>
+                        <a href="#">Kinh Dị</a>
+                        <a href="#">Gia Đình</a>
+                        <a href="#">Lịch Sử</a>
+                        </div>
+                        <div>
+                        <a href="#">Tài Liệu</a>
+                        <a href="#">Hoạt Hình</a>
+                        <a href="#">Tâm Lý</a>
+                        <a href="#">Tình Cảm</a>
+                        <a href="#">Hài Hước</a>
+                        </div>
+                       <div>
+                        <a href="#">Võ Thuật</a>
+                        <a href="#">Hành Động Phiêu Lưu</a>
+                        <a href="#">Khoa Học Viễn Tưởng</a>
+                        <a href="#">Hình sự Tội phạm</a>
+                        <a href="#">Chiến Tranh</a>
+                        <a href="#">Âm Nhạc</a>
+                       </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="btl/boHD.html">Phim bộ</a>
+                    <div class="dropdown-content movie-dropdown">
+                        <div>
+                            <a href="#">Phim bộ HDViet đề cử</a>
+                            <a href="#">Phim bộ mới cập nhật</a>
+                            <a href="#">Phim bộ hoàn thành</a>
+                            <a href="#">Phim bộ đang chiếu</a>
+                        </div>
+                        <div>
+                            <div class="nested-dropdown">
+                                <a href="#">Âu Mỹ</a>
+                                <div class="nested-dropdown-content">
+                                    <a href="#">Phim Mỹ</a>
+                                    <a href="#">Phim Anh</a>
+                                    <a href="#">Phim Pháp</a>
+                                </div>
+                            </div>
+                            <div class="nested-dropdown">
+                                <a href="#">Hàn Quốc</a>
+                                <div class="nested-dropdown-content">
+                                    <a href="#">Phim tình cảm</a>
+                                    <a href="#">Phim hài</a>
+                                    <a href="#">Phim tâm lý</a>
+                                </div>
+                            </div>
+                            <div class="nested-dropdown">
+                                <a href="#">Trung Quốc</a>
+                                <div class="nested-dropdown-content">
+                                    <a href="#">Phim cổ trang</a>
+                                    <a href="#">Phim võ thuật</a>
+                                </div>
+                            </div>
+                            <div class="nested-dropdown">
+                                <a href="#">Thái Lan</a>
+                                <div class="nested-dropdown-content">
+                                    <a href="#">Phim tình cảm</a>
+                                    <a href="#">Phim kinh dị</a>
+                                </div>
+                            </div>
+                            <div class="nested-dropdown">
+                                <a href="#">Việt Nam</a>
+                                <div class="nested-dropdown-content">
+                                    <a href="#">Phim gia đình</a>
+                                    <a href="#">Phim hài</a>
+                                    <a href="#">Phim tâm lý</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="TVShow.html">TV Show</a></li>
+                <li><a href="#">Xem TV</a></li>
+            </ul>
+        </nav>
+        <form id="search-form">
+            <input type="search" id="search-input" placeholder="Tìm kiếm phim...">
+            <button type="submit" id="search-button">
+                <i class="fas fa-search"></i>
+                <span>Tìm kiếm</span>
+            </button>
+        </form>
+        <div class="user-actions">
+            
+            <a href="Login/Login.html" targer="_parent" class="login">Đăng nhập</a>
+            <a href="Login/Register.html" targer="_parent" class="register">Đăng ký</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="movie-showcase">
+          <!-- Các slide hiện tại -->
+          <div class="showcase-slide active">
+            <img src="imag/Vip.jpg" alt="Movie 1" class="showcase-image">
+            <div class="showcase-content">
+              <h2 class="showcase-title">Nghìn lẻ một đêm</h2>
+              <p class="showcase-description">Sweet Dreams</p>
+            </div>
+            <a href="Phim/Sweet_Dreams.html" class="movie-link"></a>
+          </div>
+          <div class="showcase-slide">
+            <img src="imag/Vip1.jpg" alt="Movie 2" class="showcase-image">
+            <div class="showcase-content">
+              <h2 class="showcase-title">Hoàng Phi Hồng: Nam Bắc Anh Hùng (Thuyết Minh)</h2>
+              <p class="showcase-description">The Unity Of Heroes</p>
+            </div>
+            <a href="movie2-link" class="movie-link"></a>
+          </div>
+          <div class="showcase-slide">
+            <img src="imag/Vip2.jpg" alt="Movie 3" class="showcase-image">
+            <div class="showcase-content">
+              <h2 class="showcase-title">Vụ Án Sao Hỏa</h2>
+              <p class="showcase-description">2036 Origin Unknow</p>
+            </div>
+            <a href="movie3-link" class="movie-link"></a>
+          </div>
+          
+          <!-- Thêm thanh điều khiển -->
+          <div class="showcase-controls">
+            <button class="control-dot active" data-slide="0"></button>
+            <button class="control-dot" data-slide="1"></button>
+            <button class="control-dot" data-slide="2"></button>
+          </div>
+        </div>
+
+        <section class="featured-movies">
+            <h2>Phim đề cử</h2> 
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <img src="imag/TayDuKi.jpeg" alt="Tây Du Ký (Phần 1)">
+                    <h3 class="movie-title">Tây Du Ký (Phần 1)</h3>
+                    <div class="movie-info">
+                        <h2>Journey To The West (Part 1)</h2>
+                        <h3>Tây Du Kí (Phần 1)</h3>
+                        <p class="movie-description">"Tây Du Ký" kể về chuyến Tôn Ngộ Không, Trư Bát Giới và Sa Ngộ Tịnh phò Đường Tăng sang phương Tây (Ấn Độ ở về phía Trung Quốc). Đường đi gặp bao trắc trở, gian nan trắc trở, tổng cộng gặp đến 81 nạn, cuối cùng cũng đều vượt qua đến được xứ sở Phật tổ, mang kinh Phật về truyền bá ở Phương Đông.</p>
+                        <p><strong>Năm sản xuất:</strong> 1986</p>
+                        <p><strong>Diễn viên:</strong> Diễm Hoài Lê, Lục Tiểu Linh Đồng, Mã Đức Hoa</p>
+                        <p><strong>Đạo diễn:</strong> Dương Khiết</p>
+                        <p><strong>Đánh giá IMDb:</strong> 8.80 (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: Jin SB</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/TruongThienSu.jpg" alt="Trương Thiên Sư">
+                    <h3 class="movie-title">Trương Thiên Sư</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/ThuyHu.webp" alt="Thủy Hử">
+                    <h3 class="movie-title">Thủy Hử</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hot-movies">
+            <h2>Phim HOT</h2>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <img src="imag/KeXau.jpg" alt="Kẻ Xấu Tất Chết">
+                    <h3 class="movie-title">Kẻ Xấu Tất Chết</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/DemKiUc.jpg" alt="Đếm Kí Ức">
+                    <h3 class="movie-title">Đêm Kí Ức</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/DaiTong.jpg" alt="Đại Tống Cung Từ">
+                    <h3 class="movie-title">Đại Tống Cung Từ</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/GiaDinhAdaam.jpg" alt="Gia Đình Addam">
+                    <h3 class="movie-title">Gia Đình Addam</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/CoGiao.webp" alt="Cô Giáo Ô Sun Nam">
+                    <h3 class="movie-title">Cô Giáo Ô Sun Nam</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/CoNangThoiDai.jpg" alt="Những Cô Nàng Thời Đại">
+                    <h3 class="movie-title">Những Cô Nàng Thời Đại</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div> 
+                <div class="movie-card">
+                    <img src="imag/24HYeu.jpg" alt="24H Yêu">
+                    <h3 class="movie-title">24H Yêu</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+                <div class="movie-card">
+                    <img src="imag/TrocYeuKy.webp" alt="Tróc Yêu Ký">
+                    <h3 class="movie-title">Tróc Yêu Ký</h3>
+                    <div class="movie-info">
+                        <h2>Tên Phim Tiếng Anh</h2>
+                        <h3>Tên Phim Tiếng Việt</h3>
+                        <p class="movie-description">Mô tả ngắn gọn về nội dung phim...</p>
+                        <p><strong>Năm sản xuất:</strong> [Năm]</p>
+                        <p><strong>Diễn viên:</strong> [Tên diễn viên 1], [Tên diễn viên 2], ...</p>
+                        <p><strong>Đạo diễn:</strong> [Tên đạo diễn]</p>
+                        <p><strong>Đánh giá IMDb:</strong> [Điểm] (lượt)</p>
+                        <p class="credit">Cảm ơn sự chia sẻ của: [Tên người chia sẻ]</p>
+                    </div>
+                    <a href="#" class="movie-link"></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <hr style="color:yellow;">
+            <div class="footer-description">
+                <p>HDViet là website xem phim online với hơn 10000 phim hay nhất chất lượng HD, phụ đề tiếng việt được cập nhật liên tục phim mới hàng ngày để phục vụ người xem.</p>
+                <p>Đến với HDViet, bạn sẽ có những phút giây thoải mái cùng những bộ <span class="highlight">phim hài</span> vui nhộn, <span class="highlight">phim hành động</span> đặc sắc... cũng như những bộ phim tâm lý tình cảm Hàn Quốc, Trung Quốc... Chúc bạn xem phim vui vẻ cùng HDViet.</p>
+            </div>
+        </section>
+    
+   
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-categories">
+                <div class="category-column">
+                    <h3>Thể loại phim</h3>
+                    <ul>
+                        <li><a href="#">Phim bộ mới cập nhật</a></li>
+                        <li><a href="#">Phim mới cập nhật</a></li>
+                        <li><a href="#">Phim yêu thích</a></li>
+                        <li><a href="#">Phim hàn quốc</a></li>
+                        <li><a href="#">Phim thuyết minh</a></li>
+                        <li><a href="#">Phim hành động</a></li>
+                        <li><a href="#">Phim HDViet đề cử</a></li>
+                        <li><a href="#">Phim viễn tưởng</a></li>
+                        <li><a href="#">Phim cổ trang</a></li>
+                        <li><a href="#">Phim kinh dị</a></li>
+                        <li><a href="#">Phim tình cảm</a></li>
+                        <li><a href="#">Phim hài</a></li>
+                    </ul>
+                </div>
+                <div class="category-column">
+                    <h3>Thế Giới Sao</h3>
+                    <ul>
+                        <li><a href="#">Thành long</a></li>
+                        <li><a href="#">Hồng kim bảo</a></li>
+                        <li><a href="#">Lưu đức hoa</a></li>
+                        <li><a href="#">Cổ thiên lạc</a></li>
+                        <li><a href="#">Tất cả diễn viên</a></li>
+                        <li><a href="#">Châu tinh trì</a></li>
+                        <li><a href="#">Châu kiệt luân</a></li>
+                        <li><a href="#">Lương triều vỹ</a></li>
+                        <li><a href="#">Châu tấn</a></li>
+                        <li><a href="#">Tất cả đạo diễn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-info">
+                <img src="imag/Logowed.png" alt="HDViet Logo" class="footer-logo">
+                <p>Đơn vị chủ quản : Công ty cổ phần trực tuyến HD Việt.</p>
+                <p>Địa chỉ đăng ký: Lầu 14, tòa nhà Vincom, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, TPHCM</p>
+                <p>Email: support@hdviet.com</p>
+                <p>Số điện thoại: 0913.151.543 (T2 - T6: 9h - 22h; T7-CN: 12h-21h)</p>
+                <p>GP MXH: Số 568/GP-BTTTT do Bộ TTTT cấp ngày 14/12/2016.</p>
+                <p>&copy; 2012 hdviet.com. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="#">Ứng Dụng</a>
+            <a href="#">Liên Hệ HDViet</a>
+            <a href="#">Hướng Dẫn Sử Dụng</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
