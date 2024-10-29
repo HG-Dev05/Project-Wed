@@ -257,3 +257,79 @@
         margin-top: 10px;
     }
 }
+
+.comments-section {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.comments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comment-count {
+    font-weight: bold;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.sort-options label {
+    margin-right: 5px;
+}
+
+#sort-select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.comment-form {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+
+
+.comment-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.comment-input::placeholder {
+    color: #aaa;
+}
+
+.fb-plugin-link {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.fb-plugin-link a {
+    color: #666;
+    text-decoration: none;
+}
+
+.fb-plugin-link a:hover {
+    text-decoration: underline;
+}
+
