@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="styleLog.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>ĐĂNG NHẬP <span class="img"></span></h2>
+        </div>
+        <div class="login-box">
+            <p class="note">Mỗi người dùng chỉ sử dụng 01 tài khoản, nếu bạn chia sẻ, tài khoản có thể bị khóa mà không thông báo trước.</p>
+            <form onsubmit="return CheckThongTin();">
+                <div class="options1">
+                    <label>Tài khoản</label>
+                    <input type="text" id="username" placeholder="Email / Số điện thoại" required>
+                </div>
+                
+                <div class="options1">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="password" placeholder="" required>
+                </div>
+                
+                <div class="options2">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Nhớ tài khoản</label>
+                    <a href="#" class="forgot-password" style="color: #333;">Quên mật khẩu?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">Đăng nhập</button>
+            </form>
+            
+            <div class="google-login">
+                <p>Hoặc đăng nhập bằng:</p>
+                <p><img src="image/gg.jpg" width="20" height="20"> Đăng nhập bằng Google</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function CheckThongTin() {
+            var input = document.getElementById("username").value;
+            var isPhone = /^(0\d{3} \d{3} \d{3}|(\(\+84\) \d{3} \d{3} \d{3}))$/;
+            var isEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            var pass = document.getElementById("password").value;
+
+            if (isPhone.test(input)) {
+            } else if (isEmail.test(input)) {
+            } else {
+             
+                alert("Vui lòng nhập số điện thoại theo định dạng: 0123 345 678 hoặc (+84) 234 564 245, hoặc nhập email hợp lệ.");
+                return false;
+            }
+            if (pass === "" || pass.includes(" ") || pass.length < 5) {
+                alert("Mật khẩu phải có ít nhất 5 ký tự và không chứa dấu cách.");
+                return false;
+            }
+            alert("Đăng nhập thành công");
+            return true;
+        }
+    </script>
+</body>
+</html>

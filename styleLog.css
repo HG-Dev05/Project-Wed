@@ -1,0 +1,97 @@
+body {
+    background-image: url('../imag/login.jpg'); 
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img {
+    float: right; 
+    margin-left: 15px;
+    position: relative;
+    top: -0.5cm; 
+}
+
+.login-container {
+    width: 450px;
+    border-radius: 10px;
+    overflow: hidden; 
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.login-header {
+    background-color: #333; 
+    padding: 1px;
+    text-align: center;
+    color: white;
+}
+
+.login-box {
+    background-color: rgba(241, 196, 15, 0.9); /* Sử dụng màu nền có độ mờ để hình nền phía sau hiện ra */
+    padding: 20px 30px;
+}
+
+.note {
+    font-size: 15px;
+    color: #333;
+    margin-top: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    color: #333;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #f1c40f;
+    background-color: #eee1b2;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.options1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options2 {
+    text-align: right;
+}
+.forgot-password {
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    color: #f1c40f;
+    border-radius: 5px;
+    width: 30%;
+    margin-left: 150px;
+}
+
+.google-login {
+    padding-left: 125px;
+}
+
+
+
